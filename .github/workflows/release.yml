@@ -51,7 +51,8 @@ jobs:
       - name: Release notes from CHANGELOG
         run: |
           version="${GITHUB_REF_NAME#v}"
-          awk -v v="$version" '$0 ~ "^## \[" v "\]" {f=1; next} /^## \[/ {f=0} f' CHANGELOG.md > notes.md
+          # Lines under this version's heading, up to the next version heading (fixed-string match, no regex escaping).
+          awk -v h="## [${version}]" 'index($0,h)==1 {f=1; next} /^## \[/ {f=0} f' CHANGELOG.md > notes.md
           [ -s notes.md ] || echo "See CHANGELOG.md" > notes.md
 
       - uses: softprops/action-gh-release@v2
