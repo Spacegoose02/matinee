@@ -44,16 +44,15 @@ docker run -d --name matinee \
   -p 7171:7171 \
   -v /path/for/matinee-config:/config \
   -v /path/to/your/media:/media \
-  ghcr.io/OWNER/matinee:latest
+  ghcr.io/spacegoose02/matinee:latest
 ```
 
-Replace `OWNER` with the GitHub account that publishes the image (see the repository's *Packages* section).
 The `/media` mount is optional: it lets Matinee measure real free space and save trailers next to your titles.
 
 To build the image yourself instead:
 
 ```bash
-git clone https://github.com/OWNER/matinee.git
+git clone https://github.com/Spacegoose02/matinee.git
 cd matinee
 docker build -t matinee .
 ```
@@ -62,8 +61,8 @@ docker build -t matinee .
 
 1. Copy [`unraid/my-matinee.xml`](unraid/my-matinee.xml) to `/boot/config/plugins/dockerMan/templates-user/`.
 2. In the Docker tab choose **Add Container**, pick the *matinee* template.
-3. The template points at the locally built image `matinee:latest`. To use the published image instead, change
-   *Repository* to `ghcr.io/OWNER/matinee:latest`.
+3. The template pulls the published image `ghcr.io/spacegoose02/matinee:latest`. To use an image you built yourself,
+   change *Repository* to `matinee:latest`.
 4. Set the **Config** path (default `/mnt/user/appdata/matinee`) and, optionally, the **Media** path.
    Use *Read/Write* on Media if you want trailers downloaded; *Read Only - Slave* for remote/Unassigned shares.
 5. Open `http://SERVER-IP:7171`.
@@ -71,7 +70,7 @@ docker build -t matinee .
 ### Updating
 
 ```bash
-docker pull ghcr.io/OWNER/matinee:latest      # or: git pull && docker build -t matinee .
+docker pull ghcr.io/spacegoose02/matinee:latest      # or: git pull && docker build -t matinee .
 ```
 
 Then recreate the container (on Unraid: *Edit*, then *Apply*). Settings live in the config folder and survive.

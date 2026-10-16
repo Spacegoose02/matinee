@@ -14,5 +14,9 @@
     "typecheck": "npm run typecheck --workspaces"
   },
   "description": "Self-hosted dashboard that ties a media stack together",
-  "license": "UNLICENSED"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spacegoose02/matinee.git"
+  }
 }

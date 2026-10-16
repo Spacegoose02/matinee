@@ -9,7 +9,7 @@
 ## Setup
 
 ```bash
-git clone https://github.com/OWNER/matinee.git
+git clone https://github.com/Spacegoose02/matinee.git
 cd matinee
 npm install            # installs both workspaces
 npm run dev:server     # http://localhost:7171  (tsx watch; restarts on change)
@@ -100,7 +100,7 @@ Releases are automated by `.github/workflows/release.yml`:
 
 1. Update `CHANGELOG.md` and the version in the root `package.json`.
 2. Commit, then tag: `git tag v1.2.3 && git push origin v1.2.3`.
-3. The workflow builds the multi-arch image, pushes it to `ghcr.io/OWNER/matinee` (`:1.2.3`, `:1.2`, `:latest`),
+3. The workflow builds the multi-arch image, pushes it to `ghcr.io/spacegoose02/matinee` (`:1.2.3`, `:1.2`, `:latest`),
    and creates a GitHub Release with the changelog section and a source archive.
 
 `.github/workflows/ci.yml` runs typecheck and build on every push and pull request.

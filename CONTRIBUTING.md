@@ -20,3 +20,5 @@ Thanks for helping. Start with [docs/HANDOVER.md](docs/HANDOVER.md) and [docs/DE
   own setup. Use `192.168.1.10`, `example.com` and similar in examples.
 - Prefer small, additive changes to the shared types in `server/src/services/types.ts`.
 - Match the existing style; comments explain why, not what.
+
+By contributing you agree your work is released under the [MIT license](LICENSE).
