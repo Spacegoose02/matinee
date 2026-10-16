@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>matinee</Name>
+  <Repository>matinee:latest</Repository>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Overview>One home for your media stack: Radarr, Sonarr, SABnzbd, qBittorrent, Plex, Jellyfin and Audiobookshelf.</Overview>
+  <Category>MediaApp:Video Tools:</Category>
+  <WebUI>http://[IP]:[PORT:7171]/</WebUI>
+  <Config Name="Web UI" Target="7171" Default="7171" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true">7171</Config>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/matinee" Mode="rw" Description="Your service connections, library cache and artwork cache" Type="Path" Display="always" Required="true">/mnt/user/appdata/matinee</Config>
+  <Config Name="Media" Target="/media" Default="/mnt/user" Mode="rw" Description="Optional. Lets Matinee measure the real free space of your media share (Settings > Storage) and save trailers next to your movies. Set to Read Only if you only want free space." Type="Path" Display="always" Required="false">/mnt/user</Config>
+</Container>
