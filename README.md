@@ -1,3 +1,15 @@
+<p align="center">
+  <img src="brand/banner.svg" alt="Matinee: one home for your media stack" width="100%">
+</p>
+
+<p align="center">
+  <a href="https://github.com/Spacegoose02/matinee/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/Spacegoose02/matinee?color=f5b942&label=release"></a>
+  <a href="https://github.com/Spacegoose02/matinee/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/Spacegoose02/matinee/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-f5b942"></a>
+  <a href="https://github.com/Spacegoose02/matinee/pkgs/container/matinee"><img alt="Docker image" src="https://img.shields.io/badge/docker-ghcr.io%2Fspacegoose02%2Fmatinee-1a1d2a?logo=docker&logoColor=white"></a>
+  <a href="docs/HANDOVER.md"><img alt="Docs" src="https://img.shields.io/badge/docs-handover%20guide-ff8a4c"></a>
+</p>
+
 # Matinee
 
 A self-hosted dashboard that ties a home media stack together: **Radarr, Sonarr, SABnzbd, qBittorrent, Deluge,
@@ -146,7 +158,16 @@ npm run build
 
 More in [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
 
-## Logo
+## Branding
 
-The mark is a manatee silhouette. `brand/` holds the SVGs and PNG icon; `brand/gen-logo.cjs` regenerates them from one
-outline (run it from that folder). Copies live in `web/public/`.
+The mark is a manatee silhouette in the app's gold (`#f5b942` to `#ff8a4c`) on near-black (`#0a0c11`).
+`brand/` holds everything:
+
+| File | Use |
+| --- | --- |
+| `logo.svg`, `icon.svg`, `favicon.svg`, `icon-512.png` | The mark, app icon, favicon (copies live in `web/public/`) |
+| `banner.svg` | README header |
+| `social-preview.png` / `.svg` | 1280 by 640 image for the GitHub social preview (Settings → General → Social preview) |
+| `gen-logo.cjs` | Regenerates the logo files from one outline (run it from `brand/`) |
+| `gen-banner.cjs` | Regenerates the banner and social preview (needs Edge or Chrome for the PNG) |
+| `apply-doc-branding.cjs` | Refreshes the logo and navigation header at the top of every file in `docs/` |

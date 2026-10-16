@@ -29,7 +29,8 @@ for (const f of files) {
 const bySection = new Map();
 for (const r of rows) bySection.set(r.section, [...(bySection.get(r.section) ?? []), r]);
 
-let out = `# HTTP API
+const { header } = require("../brand/apply-doc-branding.cjs");
+let out = header() + `# HTTP API
 
 Routes exposed by Matinee itself. The web app is the only intended client, so this is a reference for development and
 debugging rather than a stable public API. **Generated from the route declarations** by

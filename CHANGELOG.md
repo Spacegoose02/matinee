@@ -6,6 +6,9 @@ commit, and push a tag `vx.y.z` (see `docs/DEVELOPMENT.md`).
 
 ## [Unreleased]
 
+### Changed
+- README banner and badges, logo and navigation header on every document, social preview image.
+
 ## [1.0.0] - 2026-10-15
 
 First public release.
